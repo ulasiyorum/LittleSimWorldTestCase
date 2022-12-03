@@ -32,7 +32,7 @@ public class Cloth
                 break;
             case 2:
                 this.clothID = 2;
-                this.clothName = "Sunglass";
+                this.clothName = "Sunglasses";
                 this.price = 200;
                 this.type = new ClothType();
                 break;
@@ -101,6 +101,12 @@ public class Cloth
                 this.clothName = "Dress";
                 this.price = 400;
                 this.type = new ClothType(default, true, true, default);
+                break;
+            case 14:
+                this.clothID = 14;
+                this.clothName = "Tiarra";
+                this.price = 250;
+                this.type = new ClothType(true);
                 break;
         }
     }

@@ -530,7 +530,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747e9b25cd76b374aa33a775849d80df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s: {fileID: 0}
+  ArmL: {fileID: 2116290492}
+  ArmR: {fileID: 1786808561}
+  LegL: {fileID: 2053314935}
+  LegR: {fileID: 1411154180}
+  Body: {fileID: 139104292}
+  Head: {fileID: 742694954}
+  FootR: {fileID: 1624079156}
+  FootL: {fileID: 1715456087}
 --- !u!1 &742694952
 GameObject:
   m_ObjectHideFlags: 0
