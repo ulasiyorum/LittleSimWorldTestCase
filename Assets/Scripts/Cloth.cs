@@ -96,6 +96,12 @@ public class Cloth : MonoBehaviour
                 this.price = 300;
                 this.type = new ClothType(default, default, default,true);
                 break;
+            case 13:
+                this.clothID = 13;
+                this.name = "Dress";
+                this.price = 400;
+                this.type = new ClothType(default, true, true, default);
+                break;
         }
     }
 }
