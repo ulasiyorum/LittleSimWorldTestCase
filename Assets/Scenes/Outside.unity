@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 139104291}
   - component: {fileID: 139104292}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,7 +433,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.375, y: 0.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -481,6 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 596938048}
   - component: {fileID: 596938047}
+  - component: {fileID: 596938049}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -517,6 +518,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596938049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596938046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747e9b25cd76b374aa33a775849d80df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: {fileID: 0}
 --- !u!1 &742694952
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +542,7 @@ GameObject:
   - component: {fileID: 742694953}
   - component: {fileID: 742694954}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1118,7 +1132,7 @@ GameObject:
   - component: {fileID: 1411154179}
   - component: {fileID: 1411154180}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Leg-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1202,7 +1216,7 @@ GameObject:
   - component: {fileID: 1624079155}
   - component: {fileID: 1624079156}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Foot-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1410,7 +1424,7 @@ GameObject:
   - component: {fileID: 1715456086}
   - component: {fileID: 1715456087}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Foot-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,7 +1508,7 @@ GameObject:
   - component: {fileID: 1786808560}
   - component: {fileID: 1786808561}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Arm-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1683,6 +1697,58 @@ Transform:
   m_Father: {fileID: 92600569}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2004244359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004244361}
+  - component: {fileID: 2004244360}
+  m_Layer: 0
+  m_Name: GameAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2004244360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004244359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d9f3a14087b654f8582fd30b146878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clothes_ArmL: []
+  Clothes_ArmR: []
+  Clothes_LegL: []
+  Clothes_LegR: []
+  Clothes_Body: []
+  Clothes_Head: []
+  Clothes_FootR: []
+  Clothes_FootL: []
+--- !u!4 &2004244361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004244359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.037525, y: 1.7014188, z: 0.009112328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053314933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,7 +1760,7 @@ GameObject:
   - component: {fileID: 2053314934}
   - component: {fileID: 2053314935}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Leg-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1778,7 +1844,7 @@ GameObject:
   - component: {fileID: 2116290491}
   - component: {fileID: 2116290492}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Arm-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

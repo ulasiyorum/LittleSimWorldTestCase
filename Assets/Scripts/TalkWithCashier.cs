@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class TalkWithCashier : MonoBehaviour
     [SerializeField] GameObject talkingBox;
 
 
-    public void Talking(int option)
+    public async void Talking(int option)
     {
         talkingBox.SetActive(true);
         if(option == 1)
@@ -23,5 +24,8 @@ public class TalkWithCashier : MonoBehaviour
         {
             talkingBox.GetComponentInChildren<Text>().text = "Not at the moment"; // to be implemented
         }
+
+        await Task.Delay(4000);
+        talkingBox.SetActive(false);
     }
 }
