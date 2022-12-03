@@ -13,10 +13,16 @@ public class SceneChanger : MonoBehaviour
     public async static void Change()
     {
         animator.Play("FadeIn");
+
         await Task.Delay((int)animator.GetCurrentAnimatorStateInfo(0).length * 400);
         if (SceneManager.GetActiveScene().name.ToLower() == "outside")
+        {
             SceneManager.LoadScene("Inside");
+        }
         else
+        {
             SceneManager.LoadScene("Outside");
+        }
+        
     }
 }

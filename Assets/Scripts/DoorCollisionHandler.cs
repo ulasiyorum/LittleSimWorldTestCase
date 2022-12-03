@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class DoorCollisionHandler : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(GameHandler.Instance.sceneInfo.outside)
+            GameHandler.Instance.sceneInfo.lastPosition = collision.transform.position;
+        GameHandler.Instance.sceneInfo.outside = !GameHandler.Instance.sceneInfo.outside;
         SceneChanger.Change();
     }
 }
