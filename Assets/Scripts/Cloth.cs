@@ -9,6 +9,10 @@ public class Cloth : MonoBehaviour
     private int price;
     private ClothType type;
 
+    public int ID { get => clothID; }
+    public string Name { get => clothName; }
+    public int Price { get => price; }
+    public ClothType Type { get => type; }
 
     public Cloth(int id)
     {
