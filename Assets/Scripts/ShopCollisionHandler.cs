@@ -9,7 +9,6 @@ public class ShopCollisionHandler : MonoBehaviour
     {
         ShopMenus.I.shopBackground.SetActive(true);
         string objName = gameObject.name.ToLower();
-        Debug.Log(objName);
         if (objName.Contains("accessory"))
         {
             ShopMenus.I.accessoriesMenu.SetActive(true);
@@ -32,9 +31,8 @@ public class ShopCollisionHandler : MonoBehaviour
         }
     }
     
-    private async void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        await Task.Delay(500);
         ShopMenus.I.hatsMenu.SetActive(false);
         ShopMenus.I.accessoriesMenu.SetActive(false);
         ShopMenus.I.topsMenu.SetActive(false);

@@ -14,12 +14,7 @@ public class ClothChanger : MonoBehaviour
     [SerializeField] SpriteRenderer FootL;
     
 
-    public void Change(int id)
-    {
-        Wear(new Cloth(id));
-    }
-
-    private void Wear(Cloth cloth)
+    public void Wear(Cloth cloth)
     {
         if (cloth.Type.isHead)
             Head.sprite = GameAssets.Instance.Clothes_Head[cloth.ID];
@@ -43,4 +38,17 @@ public class ClothChanger : MonoBehaviour
             FootR.sprite = GameAssets.Instance.Clothes_FootR[cloth.ID];
         }
     }
+    
+    public void ApplyChanges(ClothChanger toApply)
+    {
+        this.ArmL = toApply.ArmL;
+        this.ArmR = toApply.ArmR;
+        this.Body = toApply.Body;
+        this.Head = toApply.Head;
+        this.LegL = toApply.LegL;
+        this.LegR = toApply.LegR;
+        this.FootL = toApply.FootL;
+        this.FootR = toApply.FootR;
+    }
+
 }
