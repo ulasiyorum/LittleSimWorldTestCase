@@ -13,7 +13,7 @@ public class SceneChanger : MonoBehaviour
     public async static void Change()
     {
         animator.Play("FadeIn");
-
+        GameHandler.Instance.sceneInfo.direction = CharacterMovement.direction; 
         await Task.Delay((int)animator.GetCurrentAnimatorStateInfo(0).length * 400);
         if (SceneManager.GetActiveScene().name.ToLower() == "outside")
         {
