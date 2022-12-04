@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         if (GameHandler.Instance.sceneInfo.outside)
-            transform.position = new Vector2(GameHandler.Instance.sceneInfo.lastPosition.x - 1,GameHandler.Instance.sceneInfo.lastPosition.y);
+            transform.position = new Vector2(GameHandler.Instance.sceneInfo.lastPosition.x - 1,GameHandler.Instance.sceneInfo.lastPosition.y-1);
 
         inventory = new List<Cloth>();
         wearingIndex = new int[5];
