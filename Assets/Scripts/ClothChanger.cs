@@ -12,7 +12,11 @@ public class ClothChanger : MonoBehaviour
     [SerializeField] SpriteRenderer Head;
     [SerializeField] SpriteRenderer FootR;
     [SerializeField] SpriteRenderer FootL;
-    
+
+    private void Start()
+    {
+        Wear(GameHandler.Instance.player.Inventory[0]);
+    }
 
     public void Wear(Cloth cloth)
     {

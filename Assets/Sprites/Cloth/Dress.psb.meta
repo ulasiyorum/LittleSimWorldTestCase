@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 500c6eaeb1d43c24cb2dbfe181751451
+guid: 111ee297a29be1a479b2b54330e68429
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,7 +93,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Katman 1
+  - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -102,9 +102,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 3
-      height: 5
-    spriteID: dbdd3d09cd27d83429c58642fe9b7c1b
+      width: 5
+      height: 6
+    spriteID: abc4ed404bb94064f95a7b07ef9a8f72
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -114,19 +114,19 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 6, y: 13}
-  - name: Katman 2
+    spritePosition: {x: 5, y: 5}
+  - name: Arm-R
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 15
-      y: 4
+      x: 4
+      y: 18
       width: 1
       height: 3
-    spriteID: de6244828a9fbb24a95a09b8304d1d50
+    spriteID: 6bd41b6788ebe744baae9c4c23259ef6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -135,20 +135,20 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 15, y: 4}
-    spritePosition: {x: 9, y: 15}
-  - name: Katman 3
+    uvTransform: {x: 4, y: 18}
+    spritePosition: {x: 9, y: 8}
+  - name: Arm-L
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 24
-      y: 4
+      x: 13
+      y: 18
       width: 1
       height: 3
-    spriteID: ffb883ee9f181b64b83920bdb0d68799
+    spriteID: 4dd1132f99767294eb8639801db0d3dd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -157,8 +157,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 24, y: 4}
-    spritePosition: {x: 5, y: 15}
+    uvTransform: {x: 13, y: 18}
+    spritePosition: {x: 5, y: 8}
+  - name: Icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 17
+      y: 4
+      width: 5
+      height: 6
+    spriteID: d926d40a3c5069c47a37dd4728949e3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 17, y: 4}
+    spritePosition: {x: 5, y: 5}
   characterData:
     bones: []
     parts: []
@@ -172,73 +194,7 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
     boneReadOnly: 0
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Android
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: iPhone
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Windows Store Apps
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0, y: 0}
@@ -259,18 +215,18 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 39688e06f6011d941aeed123d04268e5
-    layerID: 13
+    spriteID: 6a1127ee4dc164b4f9ed36bc57a28e96
+    layerID: 12
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Katman 1
-    spriteName: Katman 1
+  - name: Body
+    spriteName: Body
     isGroup: 0
     parentIndex: 0
-    spriteID: dbdd3d09cd27d83429c58642fe9b7c1b
-    layerID: 3
+    spriteID: abc4ed404bb94064f95a7b07ef9a8f72
+    layerID: 11
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
@@ -279,19 +235,19 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 02a5100602c94bc4487cf464526475c1
-    layerID: 10
+    spriteID: e44a09e46e581394bbbd55bf8c77e8db
+    layerID: 9
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Katman 2
-    spriteName: Katman 2
+  - name: Arm-R
+    spriteName: Arm-R
     isGroup: 0
     parentIndex: 2
-    spriteID: de6244828a9fbb24a95a09b8304d1d50
-    layerID: 15
-    mosaicPosition: {x: 15, y: 4}
+    spriteID: 6bd41b6788ebe744baae9c4c23259ef6
+    layerID: 8
+    mosaicPosition: {x: 4, y: 18}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -299,19 +255,39 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: eda9aaa905109a04d8423bf2d52244b9
-    layerID: 8
+    spriteID: cae4260a0db3afd42a124b5942e47bc8
+    layerID: 6
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Katman 3
-    spriteName: Katman 3
+  - name: Arm-L
+    spriteName: Arm-L
     isGroup: 0
     parentIndex: 4
-    spriteID: ffb883ee9f181b64b83920bdb0d68799
-    layerID: 16
-    mosaicPosition: {x: 24, y: 4}
+    spriteID: 4dd1132f99767294eb8639801db0d3dd
+    layerID: 5
+    mosaicPosition: {x: 13, y: 18}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Icon
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 3ce90ea6e58416345afb04c38e4e5098
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Icon
+    spriteName: Icon
+    isGroup: 0
+    parentIndex: 6
+    spriteID: d926d40a3c5069c47a37dd4728949e3a
+    layerID: 13
+    mosaicPosition: {x: 17, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
