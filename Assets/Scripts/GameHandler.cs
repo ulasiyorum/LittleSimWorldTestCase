@@ -16,6 +16,7 @@ public class GameHandler : MonoBehaviour
         }
     }
 
+    public Canvas canvas;
     public SceneInfo sceneInfo;
     public Player player;
 }

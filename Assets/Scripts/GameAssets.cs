@@ -25,4 +25,7 @@ public class GameAssets : MonoBehaviour
     public Sprite[] Clothes_FootR;
     public Sprite[] Clothes_FootL;
 
+
+    public GameObject popUpPrefab;
+
 }

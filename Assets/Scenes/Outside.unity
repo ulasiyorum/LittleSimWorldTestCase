@@ -3630,6 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9c162df898daa469d0b0bb7f62615f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1031435199}
   sceneInfo: {fileID: 11400000, guid: d6e3f296200390243907c2206a449a3b, type: 2}
   player: {fileID: 92600575}
 --- !u!4 &596938048
@@ -3745,7 +3746,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.875, y: 0.5}
+  m_Size: {x: 1.625, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -6767,6 +6768,7 @@ MonoBehaviour:
   - {fileID: 2834329173311698103, guid: ebe8beec5205d234e8e1a7cd38d0ada9, type: 3}
   Clothes_FootL:
   - {fileID: -1562813354167589745, guid: ebe8beec5205d234e8e1a7cd38d0ada9, type: 3}
+  popUpPrefab: {fileID: 8382345821689206974, guid: abe42d16af42fb94db98dd23b45a33e9, type: 3}
 --- !u!4 &2004244361
 Transform:
   m_ObjectHideFlags: 0

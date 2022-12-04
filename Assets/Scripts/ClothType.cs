@@ -21,4 +21,28 @@ public class ClothType
         else
             isNone = false;
     }
+
+    public override string ToString()
+    {
+        if (isBody && isLegs)
+            return "Dress";
+
+        if (isHead)
+            return "Hat";
+
+        if (isFeet)
+            return "Footwear";
+
+        if (isLegs)
+            return "Pants";
+
+        if (isBody)
+            return "Top";
+
+        if (isNone)
+            return "Accessory";
+
+        return "Cloth";
+        
+    }
 }
