@@ -45,14 +45,15 @@ public class ClothChanger : MonoBehaviour
     
     public void ApplyChanges(ClothChanger toApply)
     {
-        this.ArmL = toApply.ArmL;
-        this.ArmR = toApply.ArmR;
-        this.Body = toApply.Body;
-        this.Head = toApply.Head;
-        this.LegL = toApply.LegL;
-        this.LegR = toApply.LegR;
-        this.FootL = toApply.FootL;
-        this.FootR = toApply.FootR;
+        this.ArmL.sprite = toApply.ArmL.sprite;
+        this.ArmR.sprite = toApply.ArmR.sprite;
+        this.Body.sprite = toApply.Body.sprite;
+        this.Head.sprite = toApply.Head.sprite;
+        this.LegL.sprite = toApply.LegL.sprite;
+        this.LegR.sprite = toApply.LegR.sprite;
+        this.FootL.sprite = toApply.FootL.sprite;
+        this.FootR.sprite = toApply.FootR.sprite;
+
     }
     
 }

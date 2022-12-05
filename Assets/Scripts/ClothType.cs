@@ -45,4 +45,27 @@ public class ClothType
         return "Cloth";
         
     }
+
+    public bool Equals(Cloth cl)
+    {
+        ClothType type = cl.Type;
+
+        if (type.isHead && isHead)
+            return true;
+
+        if (type.isFeet && isFeet)
+            return true;
+
+        if (type.isLegs && isLegs)
+            return true;
+
+        if (type.isBody && isBody)
+            return true;
+
+        if (type.isNone && isNone)
+            return true;
+
+
+        return false;
+    }
 }
