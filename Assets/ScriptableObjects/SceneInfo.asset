@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4927c6bf6088414da427fc6009d19d0, type: 3}
   m_Name: SceneInfo
   m_EditorClassIdentifier: 
-  lastPosition: {x: 1.7896918, y: -0.03703701}
+  lastPosition: {x: 5.8595085, y: 1.0331419}
+  direction: -1
   outside: 0
+  balance: 5000

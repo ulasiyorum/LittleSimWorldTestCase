@@ -12,10 +12,15 @@ public class ClothChanger : MonoBehaviour
     [SerializeField] SpriteRenderer Head;
     [SerializeField] SpriteRenderer FootR;
     [SerializeField] SpriteRenderer FootL;
+    [SerializeField] GameObject[] Accessory;
 
     private void Start()
     {
-        Wear(GameHandler.Instance.player.Inventory[0]);
+        foreach (int id in GameHandler.Instance.player.wearingIndex)
+        {
+            Wear(new Cloth(id));
+        }
+        
     }
 
     public void Wear(Cloth cloth)
@@ -41,6 +46,26 @@ public class ClothChanger : MonoBehaviour
             FootL.sprite = GameAssets.Instance.Clothes_FootL[cloth.ID];
             FootR.sprite = GameAssets.Instance.Clothes_FootR[cloth.ID];
         }
+
+        if (cloth.Type.isNone)
+        {
+            if (cloth.Name.ToLower().Contains("chain"))
+            {
+                Accessory[1].SetActive(false);
+                Accessory[0].SetActive(true);
+            }
+            else
+            {
+                Accessory[0].SetActive(false);
+                Accessory[1].SetActive(true);
+            }
+        }
+        else
+        {
+            Accessory[0].SetActive(false);
+            Accessory[1].SetActive(false);
+        }
+
     }
     
     public void ApplyChanges(ClothChanger toApply)
@@ -54,6 +79,8 @@ public class ClothChanger : MonoBehaviour
         this.FootL.sprite = toApply.FootL.sprite;
         this.FootR.sprite = toApply.FootR.sprite;
 
+        Accessory[0].SetActive(toApply.Accessory[0].activeSelf);
+        Accessory[1].SetActive(toApply.Accessory[1].activeSelf);
     }
     
 }

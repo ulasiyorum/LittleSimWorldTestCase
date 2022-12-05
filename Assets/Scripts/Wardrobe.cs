@@ -22,6 +22,7 @@ public class Wardrobe : MonoBehaviour
             if (cl.Type.Equals(toTry))
             {
                 tryingOn.Remove(cl);
+                break;
             }
         }
         tryingOn.Add(toTry);

@@ -112,7 +112,7 @@ public class Cloth
                 this.clothID = 0;
                 this.clothName = "Default";
                 this.price = 0;
-                this.type = new ClothType(default,true,true,true);
+                this.type = new ClothType(true,true,true,true);
                 break;
         }
     }

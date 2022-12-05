@@ -16,7 +16,7 @@ public class ClothType
         this.isBody = isBody;
         this.isLegs = isLegs;
         this.isFeet = isFeet;
-        if (!(isHead && isBody && isLegs && isFeet))
+        if (!this.isHead && !this.isBody && !this.isLegs && !this.isFeet)
             isNone = true;
         else
             isNone = false;

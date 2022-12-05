@@ -54,6 +54,12 @@ public class ShopCartAndCheckout : MonoBehaviour
 
     public void Checkout()
     {
+        if(cart.Count <= 0)
+        {
+            StartPopUpMessage.Message("NO ITEM FOUND ON CART", Color.red);
+            return;
+        }
+
         int cost = 0;
 
         foreach(Cloth cl in cart)
@@ -68,6 +74,7 @@ public class ShopCartAndCheckout : MonoBehaviour
             return;
         }
 
+        StartPopUpMessage.Message("BOUGHT SUCCESSFULLY", Color.green);
         GameHandler.Instance.player.BuyItems(cart,cost);
         GetComponent<UIHandler>().UpdateBalance();
         cart.Clear();
@@ -129,13 +136,16 @@ public class ShopCartAndCheckout : MonoBehaviour
                 if(wearingID == item.ID)
                 {
                     GetComponent<ClothChanger>().Wear(new Cloth(0));
+                    FindObjectOfType<Wardrobe>(true).GetComponent<ClothChanger>().Wear(new Cloth(0));
+                    GameHandler.Instance.player.ApplyIndex(new List<Cloth> { new Cloth(0) });
                 }
             }
             
-            GameHandler.Instance.player.Inventory.Remove(item);
+            GameHandler.Instance.player.RemoveWithID(item.ID);
             GameHandler.Instance.player.Balance += item.Price;
             GetComponent<UIHandler>().UpdateBalance();
             StartPopUpMessage.Message("SUCCESSFULLY REFUNDED", Color.green);
+            GetComponent<MenuItemPrefabHandler>().GetRefunds();
             refundMenu.SetActive(false);
             return;
         }

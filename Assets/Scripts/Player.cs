@@ -23,8 +23,11 @@ public class Player : MonoBehaviour
             new Cloth(0)
         };
 
-        wearingIndex = new int[5];
-        Balance = 5000;
+        if (GameHandler.Instance.sceneInfo.inventory != null)
+            inventory = GameHandler.Instance.sceneInfo.inventory;
+
+        wearingIndex = GameHandler.Instance.sceneInfo.wearingIndex;
+        Balance = GameHandler.Instance.sceneInfo.balance;
     }
 
     public void BuyItems(List<Cloth> cart,int cost)
@@ -59,6 +62,18 @@ public class Player : MonoBehaviour
             if (type.isNone)
             {
                 wearingIndex[4] = cl.ID;
+            }
+        }
+    }
+
+    public void RemoveWithID(int id)
+    {
+        foreach(Cloth cl in inventory)
+        {
+            if(cl.ID == id)
+            {
+                inventory.Remove(cl);
+                break;
             }
         }
     }
