@@ -10,6 +10,7 @@ public class Wardrobe : MonoBehaviour
     private void Start()
     {
         changer = GameHandler.Instance.GetComponent<ClothChanger>();
+        temporaryChanger = changer;
     }
 
     public void TryClothesOn(int id)

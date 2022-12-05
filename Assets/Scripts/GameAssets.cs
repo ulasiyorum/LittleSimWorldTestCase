@@ -27,5 +27,6 @@ public class GameAssets : MonoBehaviour
 
 
     public GameObject popUpPrefab;
+    public GameObject[] menuItemPrefabs;
 
 }

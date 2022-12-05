@@ -54,5 +54,5 @@ public class ClothChanger : MonoBehaviour
         this.FootL = toApply.FootL;
         this.FootR = toApply.FootR;
     }
-
+    
 }
