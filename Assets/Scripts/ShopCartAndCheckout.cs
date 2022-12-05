@@ -136,14 +136,25 @@ public class ShopCartAndCheckout : MonoBehaviour
 
         foreach(Cloth item in GameHandler.Instance.player.Inventory)
         {
-            if(item.ID == id)
+            if(item.ID == id && !CartContains(id))
             {
                 refundCart.Add(item);
                 StartPopUpMessage.Message("CLICK APPLY TO COMPLETE REFUND", Color.green);
             } 
         }
     }
+    private bool CartContains(int id)
+    {
+        foreach(Cloth cl in refundCart)
+        {
+            if(cl.ID == id)
+            { 
+                return true;
+            }
+        }
 
+        return false;
+    }
     public void ApplyRefund()
     {
         foreach(Cloth item in refundCart)
@@ -169,6 +180,8 @@ public class ShopCartAndCheckout : MonoBehaviour
         }
         if(refundCart.Count <= 0)
             StartPopUpMessage.Message("NON SELECTED TO REFUND", Color.red);
+
+        refundCart.Clear();
     }
 
     public void CancelRefund()

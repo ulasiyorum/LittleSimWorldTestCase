@@ -47,7 +47,6 @@ ScriptedImporter:
     flipbookRows: 0
     flipbookColumns: 0
     ignorePngGamma: 0
-    cookieMode: 0
     filterMode: 0
     aniso: 1
     mipBias: 0
@@ -90,7 +89,6 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
-    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: Legs-R
@@ -113,8 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 15, y: 4}
-    spritePosition: {x: 8, y: 6}
+    uvTransform: {x: 7, y: -2}
   - name: Legs-L
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -135,8 +132,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 24, y: 4}
-    spritePosition: {x: 6, y: 6}
+    uvTransform: {x: 18, y: -2}
   - name: Icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -157,8 +153,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 6, y: 10}
+    uvTransform: {x: -2, y: -6}
   characterData:
     bones: []
     parts: []

@@ -17,7 +17,6 @@ public class Wardrobe : MonoBehaviour
     {
         Cloth toTry = new Cloth(id);
         changer.Wear(toTry);
-        tryingOn.Add(toTry);
         foreach (Cloth cl in tryingOn)
         {
             if (cl.Type.Equals(toTry))
@@ -26,6 +25,7 @@ public class Wardrobe : MonoBehaviour
                 break;
             }
         }
+        tryingOn.Add(toTry);
     }
 
     public void Revert()

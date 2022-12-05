@@ -23,11 +23,11 @@ public class Player : MonoBehaviour
             new Cloth(0)
         };
 
-        if (GameHandler.Instance.sceneInfo.inventory != null)
-            inventory = GameHandler.Instance.sceneInfo.inventory;
+              if (GameHandler.Instance.sceneInfo.inventory != null)
+                inventory = GameHandler.Instance.sceneInfo.inventory;
 
-        wearingIndex = GameHandler.Instance.sceneInfo.wearingIndex;
-        Balance = GameHandler.Instance.sceneInfo.balance;
+           wearingIndex = GameHandler.Instance.sceneInfo.wearingIndex;
+           Balance = GameHandler.Instance.sceneInfo.balance;
     }
 
     public void BuyItems(List<Cloth> cart,int cost)
