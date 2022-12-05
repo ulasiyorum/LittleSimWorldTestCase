@@ -16,8 +16,11 @@ public class ClothChanger : MonoBehaviour
 
     private void Start()
     {
+        Wear(new Cloth(0));
+
         foreach (int id in GameHandler.Instance.player.wearingIndex)
         {
+            if(id != 0)
             Wear(new Cloth(id));
         }
         
@@ -81,6 +84,8 @@ public class ClothChanger : MonoBehaviour
 
         Accessory[0].SetActive(toApply.Accessory[0].activeSelf);
         Accessory[1].SetActive(toApply.Accessory[1].activeSelf);
+
+
     }
     
 }

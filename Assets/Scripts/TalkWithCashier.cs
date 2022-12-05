@@ -8,7 +8,10 @@ public class TalkWithCashier : MonoBehaviour
 {
     [SerializeField] GameObject talkingBox;
 
-
+    private void Start()
+    {
+        Welcome();
+    }
     public async void Talking(int option)
     {
         talkingBox.SetActive(true);
@@ -26,6 +29,14 @@ public class TalkWithCashier : MonoBehaviour
         }
 
         await Task.Delay(4000);
+        talkingBox.SetActive(false);
+    }
+
+    private async void Welcome()
+    {
+        talkingBox.SetActive(true);
+        talkingBox.GetComponentInChildren<Text>().text = "Welcome to our store!"; // + Player.Name
+        await Task.Delay(2000);
         talkingBox.SetActive(false);
     }
 }

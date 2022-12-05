@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         if (GameHandler.Instance.sceneInfo.outside)
-            transform.position = new Vector2(GameHandler.Instance.sceneInfo.lastPosition.x - 1,GameHandler.Instance.sceneInfo.lastPosition.y-1);
+            transform.position = new Vector2(GameHandler.Instance.sceneInfo.lastPosition.x - (1 / GameHandler.Instance.canvas.scaleFactor),GameHandler.Instance.sceneInfo.lastPosition.y - (1 / GameHandler.Instance.canvas.scaleFactor));
 
         inventory = new List<Cloth>
         {

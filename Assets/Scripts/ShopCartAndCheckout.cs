@@ -11,6 +11,7 @@ public class ShopCartAndCheckout : MonoBehaviour
     [SerializeField] Text cartCount;
     [SerializeField] GameObject cartMenu;
     [SerializeField] GameObject refundMenu;
+    [SerializeField] Text total;
 
     private List<Cloth> refundCart;
 
@@ -40,6 +41,7 @@ public class ShopCartAndCheckout : MonoBehaviour
         }
         Cloth toAdd = new Cloth(id);
         cart.Add(toAdd);
+        total.text = "Total: " + GetTotalPrice();
         StartPopUpMessage.Message("ADDED " + toAdd.Name +" TO CART", Color.green);
         cartCount.text = "" + cart.Count;
     }
@@ -48,9 +50,22 @@ public class ShopCartAndCheckout : MonoBehaviour
     {
         cart.Clear();
         GetComponent<MenuItemPrefabHandler>().GetCart();
+        total.text = "Total: " + GetTotalPrice();
         cartCount.text = "" + cart.Count;
     }
 
+    private int GetTotalPrice()
+    {
+        if (cart.Count <= 0)
+            return 0;
+
+        int tot = 0;
+        foreach(Cloth cl in cart)
+        {
+            tot += cl.Price;
+        }
+        return tot;
+    }
 
     public void Checkout()
     {
@@ -78,6 +93,7 @@ public class ShopCartAndCheckout : MonoBehaviour
         GameHandler.Instance.player.BuyItems(cart,cost);
         GetComponent<UIHandler>().UpdateBalance();
         cart.Clear();
+        total.text = "Total: " + GetTotalPrice();
         cartCount.text = "" + cart.Count;
         GetComponent<MenuItemPrefabHandler>().GetCart();
     }
@@ -104,6 +120,7 @@ public class ShopCartAndCheckout : MonoBehaviour
                 break;
             }
         }
+        total.text = "Total: " + GetTotalPrice();
         GetComponent<MenuItemPrefabHandler>().GetCart();
         cartCount.text = "" + cart.Count;
     }
@@ -135,9 +152,11 @@ public class ShopCartAndCheckout : MonoBehaviour
             {
                 if(wearingID == item.ID)
                 {
-                    GetComponent<ClothChanger>().Wear(new Cloth(0));
-                    FindObjectOfType<Wardrobe>(true).GetComponent<ClothChanger>().Wear(new Cloth(0));
-                    GameHandler.Instance.player.ApplyIndex(new List<Cloth> { new Cloth(0) });
+                    Wardrobe wd = FindObjectOfType<Wardrobe>(true);
+                    wd.gameObject.SetActive(true);
+                    wd.TryClothesOn(0);
+                    wd.Apply();
+                    wd.gameObject.SetActive(false);
                 }
             }
             
@@ -147,10 +166,9 @@ public class ShopCartAndCheckout : MonoBehaviour
             StartPopUpMessage.Message("SUCCESSFULLY REFUNDED", Color.green);
             GetComponent<MenuItemPrefabHandler>().GetRefunds();
             refundMenu.SetActive(false);
-            return;
         }
-
-        StartPopUpMessage.Message("NON SELECTED TO REFUND", Color.red);
+        if(refundCart.Count <= 0)
+            StartPopUpMessage.Message("NON SELECTED TO REFUND", Color.red);
     }
 
     public void CancelRefund()
