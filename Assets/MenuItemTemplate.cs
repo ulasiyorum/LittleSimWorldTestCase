@@ -11,6 +11,10 @@ public class MenuItemTemplate : MonoBehaviour
             Wardrobe wardrobe = FindObjectOfType<Wardrobe>();
             wardrobe.TryClothesOn(id);
         }
+        else if(GetComponentInChildren<Button>().GetComponentInChildren<Text>().text.ToLower() == "refund")
+        {
+            GameHandler.Instance.GetComponent<ShopCartAndCheckout>().Refund(id);
+        }
         else
         {
             GameHandler.Instance.GetComponent<ShopCartAndCheckout>().RemoveFromCart(id);
