@@ -25,7 +25,7 @@ public class TalkWithCashier : MonoBehaviour
         }
         else
         {
-            talkingBox.GetComponentInChildren<Text>().text = "Not at the moment"; // to be implemented
+            talkingBox.GetComponentInChildren<Text>().text = "Black Friday is passed honey."; // to be implemented
         }
 
         await Task.Delay(4000);
@@ -36,7 +36,7 @@ public class TalkWithCashier : MonoBehaviour
     {
         talkingBox.SetActive(true);
         talkingBox.GetComponentInChildren<Text>().text = "Welcome to our store!"; // + Player.Name
-        await Task.Delay(2000);
+        await Task.Delay(3000);
         talkingBox.SetActive(false);
     }
 }

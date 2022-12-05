@@ -6,13 +6,13 @@ using UnityEngine;
 public class CashierCollisionHandler : MonoBehaviour
 {
     [SerializeField] GameObject cashierOptions;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         cashierOptions.SetActive(true);
     }
-    private async void OnCollisionExit2D(Collision2D collision)
+    private async void OnTriggerExit2D(Collider2D collision)
     {
-        await Task.Delay(500);
+        await Task.Delay(800);
         cashierOptions.SetActive(false);
     }
 }
