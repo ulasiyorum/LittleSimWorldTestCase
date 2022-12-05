@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class ShopCartAndCheckout : MonoBehaviour
 {
     private List<Cloth> cart;
+    public List<Cloth> Cart { get => cart; }
+
     [SerializeField] Text cartCount;
     [SerializeField] GameObject cartMenu;
     private void Start()
     {
         cartCount.text = "0";
+        cart = new List<Cloth>();
     }
     public void AddToCart(int id)
     {
@@ -59,5 +62,16 @@ public class ShopCartAndCheckout : MonoBehaviour
         }
 
         // Open Menu
+    }
+
+    public void RemoveFromCart(int id)
+    {
+        foreach(Cloth item in Cart)
+        {
+            if(item.ID == id)
+            {
+                Cart.Remove(item);
+            }
+        }
     }
 }
