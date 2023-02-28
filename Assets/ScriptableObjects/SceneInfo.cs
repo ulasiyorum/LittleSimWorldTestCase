@@ -12,12 +12,15 @@ public class SceneInfo : ScriptableObject {
     public List<Cloth> inventory;
     public int balance;
     public int[] wearingIndex;
-    private void OnEnable()
+
+    private void Awake()
     {
         wearingIndex = new int[5];
         balance = 5000;
         direction = 1;
-        lastPosition = GameHandler.Instance.player.transform.position;
         outside = true;
+        Debug.Log(GameHandler.Instance == null);
+        lastPosition = GameHandler.Instance.player.transform.position;
     }
+
 }
